@@ -94,10 +94,13 @@ function keyPressed(){
 
 	if(keyCode === RIGHT_ARROW){
        helicopterSprite.x = helicopterSprite.x +10;
+	   packageBody.position.x = helicopterSprite.x;
+	   
 	}
 
 	if(keyCode === LEFT_ARROW){
 		helicopterSprite.x = helicopterSprite.x -10;
+	    packageBody.position.x = helicopterSprite.x;
 	 }
 
 	 if(keyCode === DOWN_ARROW){

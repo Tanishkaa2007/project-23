@@ -74,36 +74,46 @@ function draw() {
   background(0);
   
   
-  packageSprite.x= packageBody.position.x 
-  packageSprite.y= packageBody.position.y 
-
-  
-  
+  packageSprite.x= packageBody.position.x;
+  packageSprite.y= packageBody.position.y ;
+ 
+  //helicopterSprite.x = helicopterBody.position.x;
+  //helicopterSprite.y = helicopterBody.position.y;
   //packageBody.position.x=helicopterSprite.x;
 	//packageBody.position.y=helicopterSprite.y;
-
   
   drawSprites();
   //packageBody.position.x = helicopterBody.position.x;
 	//packageBody.position.y = helicopterBody.position.y;
-  
+     
 
 }
 
 function keyPressed(){
-
+	 
 	if(keyCode === RIGHT_ARROW){
        helicopterSprite.x = helicopterSprite.x +10;
 	   packageBody.position.x = helicopterSprite.x;
-	   
+	   //packageBody.position.x = helicopterBody.position.x;
+	  // packageSprite.x = helicopterSprite.x;
+	  //packageSprite.x = helicopterBody.position.x;
 	}
 
 	if(keyCode === LEFT_ARROW){
 		helicopterSprite.x = helicopterSprite.x -10;
 	    packageBody.position.x = helicopterSprite.x;
+		//packageBody.position.x = helicopterBody.position.x;
+		//packageSprite.x = helicopterSprite.x;
+		//packageSprite.x = helicopterBody.position.x;
 	 }
+
+	 
 
 	 if(keyCode === DOWN_ARROW){
 		 Matter.Body.setStatic(packageBody,false);
 	 }
+
+	 //else {
+		// Matter.Body.setStatic(packageBody,isStatic);
+	 //}
 }
